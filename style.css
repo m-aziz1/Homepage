@@ -15,7 +15,6 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 /* 3. Enable keyword animations */
@@ -26,13 +25,11 @@
 }
 
 body {
-  /* 4. Add accessible line-height */
+  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.5;
-  /* 5. Improve text rendering */
   -webkit-font-smoothing: antialiased;
 }
 
-/* 6. Improve media defaults */
 img,
 picture,
 video,
@@ -42,7 +39,6 @@ svg {
   max-width: 100%;
 }
 
-/* 7. Inherit fonts for form controls */
 input,
 button,
 textarea,
@@ -50,7 +46,6 @@ select {
   font: inherit;
 }
 
-/* 8. Avoid text overflows */
 p,
 h1,
 h2,
@@ -61,10 +56,10 @@ h6 {
   overflow-wrap: break-word;
 }
 
-/* 9. Improve line wrapping */
 p {
   text-wrap: pretty;
 }
+
 h1,
 h2,
 h3,
@@ -74,27 +69,12 @@ h6 {
   text-wrap: balance;
 }
 
-/*
-  10. Create a root stacking context
-*/
 #root,
 #__next {
   isolation: isolate;
 }
 
-header {
-  position: relative;
-  flex-direction: row;
-  flex-wrap: wrap;
-  display: flex;
-  align-items: stretch;
-  justify-content: center;
-  padding: 50px;
-  max-width: 1200px;
-  z-index: 1;
-  margin: 0 auto;
-}
-
+/* ICONS */
 .icon-group {
   display: flex;
   gap: 20px;
@@ -108,6 +88,20 @@ header {
 
 .card-svg {
   width: 24px;
+}
+
+/* HEADER */
+header {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  padding: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+  z-index: 1;
 }
 
 .background-shape {
@@ -147,7 +141,8 @@ header {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-h2 {
+h2,
+footer h2 {
   font-size: 1.8rem;
   margin-bottom: 20px;
   color: var(--dark-color);
@@ -157,17 +152,7 @@ h2 {
   font-size: 1rem;
 }
 
-/* Responsive behavior: stack vertically on small screens */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-  }
 
-  .header-img,
-  .about {
-    flex: 1 1 auto;
-  }
-}
 
 main {
   padding: 50px;
@@ -206,14 +191,9 @@ main {
 footer {
   background-color: var(--primary-color);
   padding: 20px;
-  width: 100%;
   color: var(--dark-color);
 }
 
-footer h2 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
 footer svg {
   fill: var(--dark-color);
 }
@@ -221,6 +201,16 @@ footer svg {
 .email {
   display: flex;
   align-items: center;
-  justify-content: start;
   gap: 10px;
 }
+
+/* @media (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+
+  .header-img,
+  .about {
+    flex: 1 1 auto;
+  }
+} */
